@@ -26,7 +26,9 @@ The tasks are:
 
 The sample of source file and output file can be found in data-sample.
 
-## Clone repository from github
+## How To Install
+
+### Clone repository from github
 
 - step 1: Clone the git repository to your local directory and enter the directory
 
@@ -64,8 +66,7 @@ Result written to file revenue-report.json successfully!
 Result written to file shiptime-report.json successfully!
 ```
 
-## How to install
-
+### Install
 
 - step 1: Enter the directory data-process-cli and install modules
 
