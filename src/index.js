@@ -8,7 +8,7 @@ const orderPriority = require('./order-priority-count');
 const { timeSpan } = require('./statistics');
 
 // const dataFile = '../data/original-data.csv';
-const defaultDataFile = './node-data-processing-medium-data.csv';
+const defaultDataFile = './data.csv';
 
 var analyseRevenue = (outputFile, sourceFile) => {
   if(!outputFile){
