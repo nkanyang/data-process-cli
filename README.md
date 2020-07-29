@@ -135,6 +135,7 @@ The most significant performance optimization is use two steps to process data: 
 The map function is used when going through all the records and only do the necessary statistics and store the result. After finish reading data, the reduce function will handle the map result and calculate the outcome of specific properties.
 
 Take task 1 for example,here is a simple test:
+
 Calculate all properties when reading ervery record
 ```
 Data written to file ../data/revenue-cost-profit.json successfully!
@@ -147,7 +148,7 @@ node index.js  27.28s user 0.33s system 100% cpu 27.381 total
 ```
 The reason of improvement is that "map + reduce" significantly reduce the number of calculation when processing large amount of recourds(millions).
 
-Further improvement:
-Another improvement is to divided the data into segments , process it concurrently with multiple instances and reduce the result. As this must be supported by framework, it's just a thought for now.
+A thought:
+Another way of improving for processing large amount of data is to divided the data into segments , process it concurrently with multiple instances and reduce the result. As this must be supported by framework, it's just a thought for now.
 
 ## FAQ
