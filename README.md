@@ -124,7 +124,37 @@ Options:
 ### Examples
 
 #### Revenue Cost and Profit
+Get Total Revenue, Cost and Profit for each region and item type.
 
+use default input and ouput file
+```
+ ✗ ls
+data.csv
+✗ data-process-cli r
+Result written to file output-revenue.json successfully!
+Time Cosumed: 0 seconds : 85 milliseconds
+ ✗ ls
+data.csv             output-revenue.json
+```
+
+spcific output file name
+```
+✗ data-process-cli r my-revenue-report.json
+Result written to file my-revenue-report.json successfully!
+Time Cosumed: 0 seconds : 88 milliseconds
+✗ ls
+data.csv               my-revenue-report.json
+
+```
+
+spcific output file name and source data file name
+```
+✗ data-process-cli r my-revenue-report.json -s data.csv
+Result written to file my-revenue-report.json successfully!
+Time Cosumed: 0 seconds : 79 milliseconds
+✗ ls
+data.csv               my-revenue-report.json
+```
 #### Order Priority
 
 #### Days to Ship
