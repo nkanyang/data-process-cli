@@ -136,7 +136,6 @@ Time Cosumed: 0 seconds : 85 milliseconds
  ✗ ls
 data.csv             output-revenue.json
 ```
-
 spcific output file name
 ```
 ✗ data-process-cli r my-revenue-report.json
@@ -146,7 +145,6 @@ Time Cosumed: 0 seconds : 88 milliseconds
 data.csv               my-revenue-report.json
 
 ```
-
 spcific output file name and source data file name
 ```
 ✗ data-process-cli r my-revenue-report.json -s data.csv
@@ -157,7 +155,29 @@ data.csv               my-revenue-report.json
 ```
 #### Order Priority
 
+Get Number of each Priority Orders for each Month.
+
+use default input and ouput file
+```
+✗ data-process-cli p                                   
+Result written to file output-order-priority.json successfully!
+Time Cosumed: 0 seconds : 50 milliseconds
+ls
+data.csv                   output-order-priority.json 
+```
+
 #### Days to Ship
+
+Get Average Time to ship(in days), and Number of Orders For Each Month(grouped by year), and by each Country(grouped by region),with totals for each levl.
+
+spcific output file name and source data file name
+```
+✗ data-process-cli t my-shiptime-report.json -s data.csv
+Result written to file my-shiptime-report.json successfully!
+Time Cosumed: 0 seconds : 69 milliseconds
+ls
+data.csv                   my-shiptime-report.json  
+```
 
 ## Performance Optimization
 
