@@ -3,6 +3,7 @@
 This is a data process cli api powered by node.js.
 
 - [data-process-cli](#data-process-cli)
+  - [Introduction](#Introduction)
   - [How to install](#How-to-install)
   - [How to use](#How-to-use)
   - [Examples](#Examples)
@@ -11,7 +12,18 @@ This is a data process cli api powered by node.js.
     - [Days to Ship](#Days-to-Ship)
   - [FAQ](#FAQ)
   
-  
+## Introduction
+
+The ali app takes a csv file as data source, and generates 1 json file per task spicified by a command.
+
+The tasks are:
+
+1.Get Total Revenue, Cost and Profit for each region and item type.
+2.Get Number of each Priority Orders for each Month.
+3.Get Average Time to ship(in days), and Number of Orders For Each Month(grouped by year), and by each Country(grouped by region),with totals for each levl.
+
+The sample of source file and output file can be found in data-sample.
+
 ## How to install
 step 1: Clone the git repository to your local directory 
 
