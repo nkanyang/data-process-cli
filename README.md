@@ -6,8 +6,10 @@ This is a data process cli api powered by node.js.
   - [How to install](#How-to-install)
   - [How to use](#How-to-use)
   - [Examples](#Examples)
-      - [Analyse Revenue, Cost and Profit](#Analyse-Revenue,-Cost-and-Profit)
-      - [Analyse Revenue, Cost and Profit](#Analyse-Revenue,-Cost-and-Profit)
+    - [Revenue Cost and Profit](#Revenue-Cost-and-Profit)
+    - [Order Priority](#Order-Priority)
+    - [Days to Ship](#Days-to-Ship)
+  - [FAQ](#FAQ)
   
   
 ## How to install
@@ -70,4 +72,10 @@ Options:
 
 ## Examples
 
-### Analyse Revenue, Cost and Profit
+### Revenue Cost and Profit
+
+### Order Priority
+
+### Days to Ship
+
+## FAQ
