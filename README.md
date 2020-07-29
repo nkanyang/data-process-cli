@@ -152,3 +152,19 @@ A thought:
 Another way of improving for processing large amount of data is to divided the data into segments , process it concurrently with multiple instances and reduce the result. As this must be supported by framework, it's just a thought for now.
 
 ## FAQ
+
+- Q1: How to place the source data file if I don't want to input it in CLI?
+
+Change your data file name to "data.csv" and run the app in the same directory with data.csv.
+
+- Q2: I get the error message "Source file: ./data.csv Not Found." when run the app, what should I do?
+
+The app can't find the default source data file. You can specify the file name with "-s" or you can do what Q1 tell you.
+
+- Q3: Where can I find my output file?
+
+Unless intentionally given, default output file will be found in the current directory with filename begin with "output"  and end with ".json".
+
+- Q4: Why the app take a long time to complete?
+
+The excute time depends on the size of the data file. When the data file is huge, it might take longer, please wait patiently.
