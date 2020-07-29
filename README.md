@@ -10,8 +10,8 @@ This is a data process cli api powered by node.js.
     - [Revenue Cost and Profit](#Revenue-Cost-and-Profit)
     - [Order Priority](#Order-Priority)
     - [Days to Ship](#Days-to-Ship)
+  - [Performance Optimization](#Performance-Optimization)
   - [FAQ](#FAQ)
-  
 ## Introduction
 
 The ali app takes a csv file as data source, and generates 1 json file per task spicified by a command.
@@ -28,7 +28,7 @@ The sample of source file and output file can be found in data-sample.
 
 ## How To Install
 
-### Clone repository from github
+### 1.Clone repository from github
 
 - step 1: Clone the git repository to your local directory and enter the directory
 
@@ -66,7 +66,7 @@ Result written to file revenue-report.json successfully!
 Result written to file shiptime-report.json successfully!
 ```
 
-### Install
+### 2.Install
 
 - step 1: Enter the directory data-process-cli and install modules
 
@@ -128,5 +128,7 @@ Options:
 #### Order Priority
 
 #### Days to Ship
+
+## Performance Optimization
 
 ## FAQ
