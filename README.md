@@ -134,7 +134,7 @@ Options:
 The most significant performance optimization is use two steps to process data: map and reduce.
 The map function is used when going through all the records and only do the necessary statistics and store the result. After finish reading data, the reduce function will handle the map result and calculate the outcome of specific properties.
 
-Take task 1 for example:
+Take task 1 for example,here is a simple test:
 Calculate all properties when reading ervery record
 ```
 Data written to file ../data/revenue-cost-profit.json successfully!
