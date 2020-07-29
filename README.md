@@ -35,8 +35,11 @@ The sample of source file and output file can be found in data-sample.
 `git clone https://github.com/nkanyang/data-process-cli.git data-process-cli`
 
 `cd data-process-cli`
+- step 2: Enter the directory data-process-cli and install modules
 
-- step 2: There are scripts in the project can generate analysis report from data.scv in data-sample without install the app
+`npm install`
+
+- step 3: There are scripts in the project can generate analysis report from data.scv in data-sample without install the app
 
 ```
 ✗ npm run generate-shiptime-report 
@@ -66,13 +69,10 @@ Result written to file revenue-report.json successfully!
 Result written to file shiptime-report.json successfully!
 ```
 
-### 2.Install
+### 2.Install and Uninstall
 
-- step 1: Enter the directory data-process-cli and install modules
 
-`npm install`
-
-- steps 2: Unstall the app globaly and now you can use it everywhere
+- Install the app globaly and now you can use it everywhere
 
 `npm link`
 
@@ -80,7 +80,7 @@ if this dosen't work out, try:
 
 `sudo npm link`
 
-- steps 3: Uninstall the app with:
+- Uninstall the app with:
 
 `npm unlink` or `sudo npm unlink`
   
