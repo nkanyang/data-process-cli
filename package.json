@@ -5,7 +5,10 @@
   "main": "src/commands.js",
   "preferGlobal": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "generate-revenue-report": "node src/commands.js r revenue-report.json -s data-sample/data.csv",
+    "generate-priority-report": "node src/commands.js p priority-report.json -s data-sample/data.csv",
+    "generate-shiptime-report": "node src/commands.js t shiptime-report.json -s data-sample/data.csv"
   },
   "bin": {
     "data-process-cli": "./src/commands.js"
@@ -24,6 +27,7 @@
   "dependencies": {
     "commander": "^6.0.0",
     "csv-parser": "^2.3.3",
+    "jest": "^26.1.0",
     "json-stable-stringify": "^1.0.1",
     "number-precision": "^1.5.0"
   }

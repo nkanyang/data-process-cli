@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const program = require('commander')
+const program = require('commander');
 
-const { analyseRevenue , analyseDaysToShip, analyseOrderPriority } = require('./index')
+const { analyseRevenue , analyseDaysToShip, analyseOrderPriority } = require('./index');
 
 program
   .version('1.0.0')

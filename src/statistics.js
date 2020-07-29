@@ -19,7 +19,6 @@ function getObjByPath(rootObj){
   return curLevel;
 }
 
-
 function sumup(sumObj, keyInSumObj, value){
   sumObj = sumObj || {};
   handleProperty(sumObj, keyInSumObj, value,(sum, value) => np.plus(sum,value));
@@ -45,7 +44,8 @@ function handleProperty(object, key, value, handler){
 }
 
 function avg(total,num){
-  return total / num;
+  let result = total / num
+  return Math.round(result * 10) / 10;
 }
 
 function days(startDate, endDate) {

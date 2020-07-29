@@ -10,32 +10,20 @@ const { timeSpan } = require('./statistics');
 const defaultDataFile = './data.csv';
 
 var analyseRevenue = (outputFile, sourceFile) => {
-  if(!outputFile){
-    outputFile = 'output-revenue.json';
-  }
-  if(!sourceFile){
-    sourceFile = defaultDataFile;
-  }
+  outputFile = outputFile || 'output-revenue.json';
+  sourceFile = sourceFile || defaultDataFile;
   processData(sourceFile, revenue, outputFile);
 }
 
 var analyseDaysToShip = (outputFile, sourceFile) => {
-  if(!outputFile){
-    outputFile = 'output-days-to-ship.json';
-  }
-  if(!sourceFile){
-    sourceFile = defaultDataFile;
-  }
+  outputFile = outputFile || 'output-days-to-ship.json';
+  sourceFile = sourceFile || defaultDataFile;
   processData(sourceFile, daysToShip, outputFile);
 }
 
 var analyseOrderPriority = (outputFile, sourceFile) => {
-  if(!outputFile){
-    outputFile = 'output-order-priority.json';
-  }
-  if(!sourceFile){
-    sourceFile = defaultDataFile;
-  }
+  outputFile = outputFile || 'output-order-priority.json';
+  sourceFile = sourceFile || defaultDataFile;
   processData(sourceFile, orderPriority, outputFile);
 }
 

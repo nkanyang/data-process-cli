@@ -22,7 +22,7 @@ var reduce = (result) => {
       let perCountry = getObjByPath(result, 'Regions', [region],'Countries',[country],'Total');
       let typeData = countryData[country]['ItemTypes'];
       Object.keys(typeData).forEach((itemType) => {
-        let perTypeTotal = getObjByPath(result, 'ItemTypes', [itemType], 'Total');
+        let perTypeTotal = getObjByPath(result, 'ItemTypes', [itemType]);
         addup(perCountry, typeData[itemType]);
         addup(perTypeTotal, typeData[itemType]);
       });
