@@ -26,10 +26,47 @@ The tasks are:
 
 The sample of source file and output file can be found in data-sample.
 
-## How to install
-step 1: Clone the git repository to your local directory 
+## Clone repository from github
+
+step 1: Clone the git repository to your local directory and enter the directory
 
 `git clone https://github.com/nkanyang/data-process-cli.git data-process-cli`
+
+`cd data-process-cli`
+
+step 2: There are scripts in the project can generate analysis report from data.scv in data-sample without install the app
+
+```
+✗ npm run generate-shiptime-report 
+
+> data-process-cli@1.0.0 generate-shiptime-report /Users/jessie/myproject/webfullstack2020/js/git-data-process-cli
+> node src/commands.js t shiptime-report.json -s data-sample/data.csv
+
+Result written to file shiptime-report.json successfully!
+Time Cosumed: 0 seconds : 62 milliseconds
+```
+
+```
+✗ npm run generate-revenue-report
+
+> data-process-cli@1.0.0 generate-revenue-report /Users/jessie/myproject/webfullstack2020/js/git-data-process-cli
+> node src/commands.js r revenue-report.json -s data-sample/data.csv
+
+Result written to file revenue-report.json successfully!
+```
+
+```
+✗ npm run generate-shiptime-report
+
+> data-process-cli@1.0.0 generate-shiptime-report /Users/jessie/myproject/webfullstack2020/js/git-data-process-cli
+> node src/commands.js t shiptime-report.json -s data-sample/data.csv
+
+Result written to file shiptime-report.json successfully!
+```
+
+## How to install
+
+
 
 step 2: Enter the directory data-process-cli and install modules
 
@@ -49,7 +86,7 @@ steps 4: Uninstall the app with:
   
 ## How to use
 
-Type the name in the app to dispaly help:
+After install the app, you can type the name in the app to dispaly help:
 ```
 ➜  ~ data-process-cli
 Usage: data-process-cli [options] [command]
@@ -84,12 +121,12 @@ Options:
   -h, --help                 display help for command
 ```
 
-## Examples
+### Examples
 
-### Revenue Cost and Profit
+#### Revenue Cost and Profit
 
-### Order Priority
+#### Order Priority
 
-### Days to Ship
+#### Days to Ship
 
 ## FAQ
