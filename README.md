@@ -19,7 +19,9 @@ The ali app takes a csv file as data source, and generates 1 json file per task 
 The tasks are:
 
 1.Get Total Revenue, Cost and Profit for each region and item type.
+
 2.Get Number of each Priority Orders for each Month.
+
 3.Get Average Time to ship(in days), and Number of Orders For Each Month(grouped by year), and by each Country(grouped by region),with totals for each levl.
 
 The sample of source file and output file can be found in data-sample.
