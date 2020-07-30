@@ -78,7 +78,7 @@ Time Cosumed: 0 seconds : 64 milliseconds
 
 `npm link`
 
-if this dosen't work out, try:
+If this dosen't work out, try:
 
 `sudo npm link`
 
@@ -130,7 +130,7 @@ The data file used in the exmples contains about 1.5 million records.
 #### Example 1: Revenue Cost and Profit
 Get Total Revenue, Cost and Profit for each region and item type.
 
-use default input and ouput file
+Use default input and ouput file
 ```
  ✗ ls
 data.csv
@@ -140,7 +140,7 @@ Time Cosumed: 26 seconds : 895 milliseconds
  ✗ ls
 data.csv             output-revenue.json
 ```
-spcific output file name
+Specify output file name
 ```
 ✗ data-process-cli r my-revenue-report.json
 Result written to file my-revenue-report.json successfully!
@@ -149,7 +149,7 @@ Time Cosumed: 26 seconds : 932 milliseconds
 data.csv               my-revenue-report.json
 
 ```
-spcific output file name and source data file name
+Specify output file name and source data file name
 ```
 ✗ data-process-cli r my-revenue-report.json -s data.csv
 Result written to file my-revenue-report.json successfully!
@@ -161,7 +161,7 @@ data.csv               my-revenue-report.json
 
 Get Number of each Priority Orders for each Month.
 
-use default input and ouput file
+Use default input and ouput file
 ```
 ✗ data-process-cli p                                   
 Result written to file output-order-priority.json successfully!
@@ -175,7 +175,7 @@ Usage of file name specification is the same as example 1.
 
 Get Average Time to ship(in days), and Number of Orders For Each Month(grouped by year), and by each Country(grouped by region),with totals for each levl.
 
-spcific output file name and source data file name
+Use default input and ouput file
 ```
 ✗ data-process-cli t
 Result written to file output-days-to-ship.json successfully!
