@@ -205,10 +205,10 @@ Data written to file ../data/revenue-cost-profit.json successfully!
 node index.js  27.28s user 0.33s system 100% cpu 27.381 total
 ```
 
-The reason of improvement is that "map + reduce" significantly reduce the number of calculation when processing large amount of recourds(millions).
+The "map + reduce" way runs more than 2 times faster. The reason of this improvement is that it reduces the number of calculation when processing each record, which will significantly reduce the time-cosuming when it come to large amount of recourds(millions).
 
 A thought:
-Another way of improving for processing large amount of data is to divided the data into segments , process it concurrently with multiple instances and reduce the result. As this must be supported by framework, it's just a thought for now.
+Another way of improving for processing large amount of data is to divided the data into segments , process them concurrently with multiple instances and then reduce the result. As this must be supported by framework, it's just a thought for now.
 
 ## FAQ
 
@@ -216,14 +216,14 @@ Another way of improving for processing large amount of data is to divided the d
 
 Change your data file name to "data.csv" and run the app in the same directory with data.csv.
 
-- Q2: I get the error message "Source file: ./data.csv Not Found." when run the app, what should I do?
+- Q2: I get the error message "Source file: ./data.csv Not Found." when running the app. What should I do?
 
-The app can't find the default source data file. You can specify the file name with "-s" or you can do what Q1 tell you.
+The app can't find the default source data file. You can specify the file name with "-s" or you can do what is told in Q1.
 
 - Q3: Where can I find my output file?
 
-Unless intentionally given, default output file will be found in the current directory with filename begin with "output"  and end with ".json".
+Unless intentionally given by user, the default output file will be found in the current directory with filename begin with "output"  and end with ".json".
 
 - Q4: Why the app take a long time to complete?
 
-The excute time depends on the size of the data file. When the data file is huge, it might take longer, please wait patiently.
+The excute time of the app depends on the size of the data file. When the data file is huge, it might take longer.
