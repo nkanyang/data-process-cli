@@ -42,7 +42,7 @@ The sample of source file and output file can be found in data-sample.
 - step 3: There are scripts in the project can generate analysis report from data.scv in data-sample without install the app
 
 ```
-✗ npm run generate-shiptime-report 
+npm run generate-shiptime-report 
 
 > data-process-cli@1.0.0 generate-shiptime-report /Users/jessie/myproject/webfullstack2020/js/git-data-process-cli
 > node src/commands.js t shiptime-report.json -s data-sample/data.csv
@@ -52,21 +52,23 @@ Time Cosumed: 0 seconds : 62 milliseconds
 ```
 
 ```
-✗ npm run generate-revenue-report
+npm run generate-revenue-report
 
 > data-process-cli@1.0.0 generate-revenue-report /Users/jessie/myproject/webfullstack2020/js/git-data-process-cli
 > node src/commands.js r revenue-report.json -s data-sample/data.csv
 
 Result written to file revenue-report.json successfully!
+Time Cosumed: 0 seconds : 77 milliseconds
 ```
 
 ```
-✗ npm run generate-shiptime-report
+npm run generate-shiptime-report
 
 > data-process-cli@1.0.0 generate-shiptime-report /Users/jessie/myproject/webfullstack2020/js/git-data-process-cli
 > node src/commands.js t shiptime-report.json -s data-sample/data.csv
 
 Result written to file shiptime-report.json successfully!
+Time Cosumed: 0 seconds : 64 milliseconds
 ```
 
 ### 2.Install and Uninstall
@@ -88,7 +90,7 @@ if this dosen't work out, try:
 
 After install the app, you can type the name in the app to dispaly help:
 ```
-➜  ~ data-process-cli
+ ✗ data-process-cli
 Usage: data-process-cli [options] [command]
 
 Order Analysis Program
@@ -111,7 +113,7 @@ Commands:
 
 Type the command in the app to dispaly help:
 ```
-➜  ~ data-process-cli r -h
+ ✗ data-process-cli r -h
 Usage: data-process-cli revenue|r [options] [fileName]
 
 Output the total Revenue, Cost and Profit for each Region and Item Type into file given by filename. If no source file supplied, read data from data.csv in current directory. If no output filename supplied, write into default file output-revenue.json in current directory
@@ -123,7 +125,7 @@ Options:
 
 ### Examples
 
-#### Revenue Cost and Profit
+#### Example 1: Revenue Cost and Profit
 Get Total Revenue, Cost and Profit for each region and item type.
 
 use default input and ouput file
@@ -132,7 +134,7 @@ use default input and ouput file
 data.csv
 ✗ data-process-cli r
 Result written to file output-revenue.json successfully!
-Time Cosumed: 0 seconds : 85 milliseconds
+Time Cosumed: 26 seconds : 895 milliseconds
  ✗ ls
 data.csv             output-revenue.json
 ```
@@ -140,7 +142,7 @@ spcific output file name
 ```
 ✗ data-process-cli r my-revenue-report.json
 Result written to file my-revenue-report.json successfully!
-Time Cosumed: 0 seconds : 88 milliseconds
+Time Cosumed: 26 seconds : 932 milliseconds
 ✗ ls
 data.csv               my-revenue-report.json
 
@@ -149,11 +151,11 @@ spcific output file name and source data file name
 ```
 ✗ data-process-cli r my-revenue-report.json -s data.csv
 Result written to file my-revenue-report.json successfully!
-Time Cosumed: 0 seconds : 79 milliseconds
+Time Cosumed: 27 seconds : 182 milliseconds
 ✗ ls
 data.csv               my-revenue-report.json
 ```
-#### Order Priority
+#### Example 2:Order Priority
 
 Get Number of each Priority Orders for each Month.
 
@@ -161,41 +163,46 @@ use default input and ouput file
 ```
 ✗ data-process-cli p                                   
 Result written to file output-order-priority.json successfully!
-Time Cosumed: 0 seconds : 50 milliseconds
+Time Cosumed: 8 seconds : 359 milliseconds
 ls
 data.csv                   output-order-priority.json 
 ```
+Usage of file name specification is the same as example 1.
 
-#### Days to Ship
+#### Example 3: Days to Ship
 
 Get Average Time to ship(in days), and Number of Orders For Each Month(grouped by year), and by each Country(grouped by region),with totals for each levl.
 
 spcific output file name and source data file name
 ```
-✗ data-process-cli t my-shiptime-report.json -s data.csv
-Result written to file my-shiptime-report.json successfully!
-Time Cosumed: 0 seconds : 69 milliseconds
+✗ data-process-cli t
+Result written to file output-days-to-ship.json successfully!
+Time Cosumed: 11 seconds : 241 milliseconds
 ls
-data.csv                   my-shiptime-report.json  
+data.csv                   output-days-to-ship.json  
 ```
+Usage of file name specification is the same as example 1.
 
 ## Performance Optimization
 
-The most significant performance optimization is use two steps to process data: map and reduce.
-The map function is used when going through all the records and only do the necessary statistics and store the result. After finish reading data, the reduce function will handle the map result and calculate the outcome of specific properties.
+The most significant performance optimization is using two steps to process data: map and reduce.
+The map function is used when going through all the records and only do the necessary statistics and store data to result. After finish reading data, the reduce function will handle the map result and calculate the outcome of specific properties.
+
+The alternative way is adding up all the totals when reading every record, which we don't need to reduce in the end but  is extremely time-consuming.
 
 Take task 1 for example,here is a simple test:
 
-Calculate all properties when reading ervery record
+Before: Adding up all the totals when reading every record
 ```
 Data written to file ../data/revenue-cost-profit.json successfully!
 node index.js  79.85s user 0.60s system 101% cpu 1:19.06 total
 ```
-map + reduce
+After: map + reduce
 ```
 Data written to file ../data/revenue-cost-profit.json successfully!
 node index.js  27.28s user 0.33s system 100% cpu 27.381 total
 ```
+
 The reason of improvement is that "map + reduce" significantly reduce the number of calculation when processing large amount of recourds(millions).
 
 A thought:
