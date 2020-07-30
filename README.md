@@ -24,7 +24,7 @@ The tasks are:
 
 3.Get Average Time to ship(in days), and Number of Orders For Each Month(grouped by year), and by each Country(grouped by region),with totals for each levl.
 
-The sample of source file and output file can be found in data-sample.
+The sample of source file and output file can be found in data-sample.We assume the data file contains clean data that make sense.
 
 ## How To Install
 
@@ -124,6 +124,8 @@ Options:
 ```
 
 ### Examples
+
+The data file used in the exmples contains about 1.5 million records.
 
 #### Example 1: Revenue Cost and Profit
 Get Total Revenue, Cost and Profit for each region and item type.
