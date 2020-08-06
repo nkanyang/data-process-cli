@@ -27,6 +27,9 @@ The tasks are:
 The sample of source file and output file can be found in data-sample.We assume the data file contains clean data that make sense.
 
 ## How To Install
+### Prerequisites
+
+- node
 
 ### 1.Clone repository from github
 
